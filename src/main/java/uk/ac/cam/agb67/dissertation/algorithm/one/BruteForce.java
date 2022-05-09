@@ -48,7 +48,6 @@ class BruteForce {
         int len = sesh.Session_Length;
         List<Integer> KeyIDs = sesh.Session_KeyInds;
 
-        /*
         // Determine the full set of preferred rooms for this session
         List<Integer> PreferredRooms = new ArrayList<>();
         for (int k : KeyIDs) {
@@ -63,8 +62,6 @@ class BruteForce {
         }
         RemainingRoomIDs.removeAll(PreferredRooms);
 
-         */
-
         //if (Main.DEBUG) System.out.println("PreferredRooms: "+ PreferredRooms.toString());
         //if (Main.DEBUG) System.out.println("RemainingRoomIDs: "+ RemainingRoomIDs.toString());
 
@@ -73,8 +70,8 @@ class BruteForce {
             for (int hour = 0; hour < HoursPerDay; hour++) {
                 if (hour + len > HoursPerDay) continue;
 
-                // Iterate through the rooms available this hour
-                for (int room = 0; room < MaxRooms; room++) {
+                // Iterate through the rooms available this hour, starting with preferred rooms
+                for (int room : PreferredRooms) {
 
                     // Check for participants having bookings in other rooms at that time, and that the room is empty at that time
                     boolean SessionDoesntClash = Coordinator.check_session_doesnt_clash(CurrentMapping, day, hour, room, sesh, Sessions);
@@ -92,7 +89,6 @@ class BruteForce {
                     }
                 }
 
-                /*
                 // Iterate through the rest of the rooms available this hour
                 for (int room : RemainingRoomIDs) {
 
@@ -112,7 +108,7 @@ class BruteForce {
                         // If that didn't fail, propagate it back up the stack
                         if (FinalMapping != null) return FinalMapping;
                     }
-                } */
+                }
 
             }
         }

@@ -3,7 +3,7 @@ package uk.ac.cam.agb67.dissertation.ui;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import part.norfolk.xml.ReadXmlDomParser;
+import uk.ac.cam.agb67.dissertation.ui.ReadXmlDomParser;
 
 import uk.ac.cam.agb67.dissertation.*;
 
@@ -247,7 +247,7 @@ public class InterfaceXML {
 
     // Takes a string and a filename, and creates a new file with the string as the contents
     private String create_file(String contents, String name) {
-        String filename = "samples\\"+name+".xml";
+        String filename = "samples/"+name+".xml";
         try {
             File newFile = new File(filename);
             if (newFile.createNewFile()) {
