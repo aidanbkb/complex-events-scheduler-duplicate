@@ -22,12 +22,12 @@ public class Main {
 
         // Retrieve the input details from the file
         InterfaceXML ui = new InterfaceXML();
-        File check_existance = new File("samples/" + location);
+        File check_existance = new File("samples\\" + location);
         if (!check_existance.exists()) {
             System.err.println("The input file was not found.");
             return;
         }
-        SchedulingProblem details = ui.XML_to_Problem("samples/" + location);
+        SchedulingProblem details = ui.XML_to_Problem("samples\\" + location);
 
         // Check that they are a usable set of input details
         if (!details.potentially_schedulable()) {
@@ -51,8 +51,17 @@ public class Main {
             System.err.println("Failed to create a valid schedule with the given input and desired algorithm."); return;
         }
 
+        System.out.println("SCHEDULE: \n" + schedule.toString());
+
+        String suffix;
+        if (optimise_choice) {
+            suffix = algorithm_choice + "opt";
+        } else{
+            suffix = algorithm_choice + "base";
+        }
+
         // Then save it to a file
-        ui.Schedule_to_XML(schedule, details, location.substring(0, location.length() - 4) + "_schedule");
+        ui.Schedule_to_XML(schedule, details, location.substring(0, location.length() - 4) + "_schedule_" + suffix);
     }
 
 }
