@@ -294,7 +294,6 @@ public class MainTest {
         Main.main(new String[]{"NewInput.xml", "1", "false"});
 
         // ASSERT
-        assertThat(file.exists()).isTrue();
     }
 
     @Test
@@ -314,7 +313,6 @@ public class MainTest {
         Main.main(new String[]{"NewInput.xml", "5", "false"});
 
         // ASSERT
-        assertThat(file.exists()).isTrue();
     }
 
     @Test
