@@ -1,0 +1,15 @@
+Greedy Brute Force,,,,,Brute Force,,,,,Brute Force (Greedy Optimised),,,,,CSP Algorithm,,,,,CSP (Randomised Optimisation),,
+Valid?,Score,RAM (MB),Time (ms),,Valid?,Score,RAM (MB),Time (ms),,Valid?,Score,RAM (MB),Time (ms),,Valid?,Score,RAM (MB),Time (ms),,Valid?,Score,RAM,Time (ms),,
+true,66,0.0,2.9436, ,true,78,0.0,2.454, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,37,0.0,0.884999, ,true,54,0.0,17.7561, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,70,0.0,0.770499, ,true,84,0.0,1.483, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,29,0.0,1.9567, ,true,42,0.0,2.5002, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,24,0.0,0.8565, ,true,32,0.0,1.183999, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,69,0.0,0.800699, ,true,79,0.0,6.991501, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,50,0.0,0.623001, ,true,65,5.677776,17.4147, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,35,0.0,0.6233, ,true,55,5.72976,27.9389, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,50,0.0,0.5457, ,true,64,0.0,1.0239, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+true,30,0.0,0.5215, ,true,41,0.0,0.960299, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,false,0,0.0,0.0, ,
+
+
+The parameters of the random test data: Days:60  Hours:8  Rooms:30  Sessions:10  Individuals:10
